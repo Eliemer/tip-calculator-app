@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+
+$body-background-color: hsl(185, 41%, 84%);
+$body-font-size: 1.5rem;
+$family-monospace: 'Space Mono', monospace;
+
+$text: $grayish-cyan;
+$text-light: $light-grayish-cyan;
+$text-strong: $dark-grayish-cyan;
+
+$input-color: $very-dark-cyan;
+$input-background-color: $very-light-grayish-cyan;
+
+$title-weight: 400;
+
+$dark: $very-dark-cyan;
+$primary: $strong-cyan;
+
+$has-background-dark: $dark;
+
+$family-primary: $family-monospace;
+
+// override Bulma vars before importing bulma
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass"

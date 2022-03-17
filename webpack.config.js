@@ -12,10 +12,29 @@ module.exports = {
         filename: "bundle.js",
     },
     devServer: {
-        publicPath: "/",
-        contentBase: "./public",
+        host: 'local-ip',
+        devMiddleware: {
+            publicPath: "/",
+        },
         port: 8080,
     },
     module: {
+        rules: [
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                ],
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
+        modules: ['src', 'node_modules'] // Assuming that your files are inside the src dir
     }
 }
